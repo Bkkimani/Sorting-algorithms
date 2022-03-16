@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+void bubble_sort (int a[], int length);
 int main (void)
 {
 int a []= {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
@@ -23,7 +23,15 @@ int a []= {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
           271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284,
           285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298,
           299};
-int length= 300;
+int length= 10;
+bubble_sort(a, length);
+
+for (int i= 0; i< length; i++)
+printf("a[%d] = %d\n", i, a[i]);
+    return 0;
+}
+void bubble_sort (int a[], int length)
+{
 for (int i= 0; i< length; i++)
 {
     for (int j= 0; j< length- 1; j++)
@@ -36,7 +44,4 @@ if (a [j]> a [j + 1])
 }
     }
 }
-for (int i= 0; i< length; i++)
-printf("a[%d] = %d\n", i, a[i]);
-    return 0;
 }
